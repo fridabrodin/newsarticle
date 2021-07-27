@@ -3,5 +3,5 @@ import { handleSubmit } from './js/formHandler'
 
 console.log(checkForName);
 
-alert("I EXIST")
-console.log("CHANGE!!");
+alert("Let's try this one out!");
+console.log("Let's try this one out!");
