@@ -14,19 +14,14 @@
     <body>
 
         <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
+            <img src="src/client/images/logo.png" id="logo">
         </header>
 
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <input id="url" type="text" name="input" value="" onblur="onBlur()" placeholder="Paste an URL here to see the magic...">
+                    <input type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
 
@@ -37,7 +32,6 @@
         </main>
 
         <footer>
-            <p>This is a footer</p>
         </footer>
         <script>
             // Check that service workers are supported

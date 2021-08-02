@@ -24,6 +24,17 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
-var textapi = new cloud({
+/*const textapi = {
     application_key: process.env.API_KEY
-  });
+  };*/
+
+
+// What we need to create an URL from the API
+let baseURL = "https://api.meaningcloud.com/sentiment-2.1?key=";
+const apiKey = process.env.API_KEY;
+let json = "&of=json&txt=";
+let lang = "&model=IPTC_en";
+
+// Our HTML elements
+
+const results = document.getElementById("results");

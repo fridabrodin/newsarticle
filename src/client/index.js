@@ -13,5 +13,5 @@ export {
 
 console.log(checkForName);
 
-alert("Let's try this one out!");
-console.log("Let's try this one out!");
+/*alert("Let's try this one out!");
+console.log("Let's try this one out!");*/
