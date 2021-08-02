@@ -24,32 +24,22 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
-/*const textapi = {
-    application_key: process.env.API_KEY
-  };*/
-
+//------------------------------------------------------------------------------------------------------------------------
 
 // What we need to create an URL from the API
 let baseURL = "https://api.meaningcloud.com/sentiment-2.1?key=";
 const apiKey = process.env.API_KEY;
-let json = "&of=json&txt=";
-let lang = "&model=IPTC_en";
+let url = "&url=";
+let lang = "&lang=en";
 
-// Our HTML elements
+/* Function to GET Meaningcloud API data*/
 
-const results = document.getElementById("results");
-const button = document.getElementById("submit");
-
-// Event listener to add function to existing HTML DOM element = the generate button
-button.addEventListener("click", getUrl);
-
-async function getUrl(){
-    const userUrl =  document.getElementById("name").value;
-
-      const response = await fetch(baseURL+apiKey+json+userUrl+lang)
-     .then(response => response.json())
-     .then(data => {
-       console.log(data);
-     })
-     .catch(err => content.innerHTML = "Please enter a valid zip code")
-     }
+const getNews = async (baseURL,apiKey,news,url,lang)=>{
+    const res = await fetch(baseURL+apiKey+news+url+lang)
+    try {
+      const data = await res.json();
+      return data;
+    }  catch(error) {
+      console.log("error", error);
+    }
+  }

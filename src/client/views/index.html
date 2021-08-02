@@ -20,13 +20,18 @@
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="url" type="text" name="input" value="" onblur="onBlur()" placeholder="Paste an URL here to see the magic...">
+                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Paste an URL here to analyze...">
                     <input type="submit" name="" id="submit" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
             <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+                <div id="results">
+                    <div id="agreement"></div>
+                    <div id="subjectivity"></div>
+                    <div id="confidence"></div>
+                    <div id="irony"></div>
+                    <div id="message"></div>
+                </div>
             </section>
         </main>
 

@@ -1,15 +1,14 @@
 function checkForName(inputText) {
-    console.log("::: Running checkForName :::", inputText);
-    let names = [
-        "Picard",
-        "Janeway",
-        "Kirk",
-        "Archer",
-        "Georgiou"
-    ]
 
-    if(names.includes(inputText)) {
+    let pattern = /^https:\/\//i;
+    console.log("::: Running checkForName :::", inputText);
+
+    if(pattern.test(inputText)) {
         alert("Welcome, Captain!")
+    }
+
+    else {
+        document.getElementById("results").innerHTML = "Please enter a valid URL";
     }
 }
 
