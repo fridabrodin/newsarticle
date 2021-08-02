@@ -38,3 +38,18 @@ let lang = "&model=IPTC_en";
 // Our HTML elements
 
 const results = document.getElementById("results");
+const button = document.getElementById("submit");
+
+// Event listener to add function to existing HTML DOM element = the generate button
+button.addEventListener("click", getUrl);
+
+async function getUrl(){
+    const userUrl =  document.getElementById("name").value;
+
+      const response = await fetch(baseURL+apiKey+json+userUrl+lang)
+     .then(response => response.json())
+     .then(data => {
+       console.log(data);
+     })
+     .catch(err => content.innerHTML = "Please enter a valid zip code")
+     }
