@@ -8,6 +8,7 @@ const mockAPIResponse = require('./mockAPI.js')
 const app = express()
 
 app.use(express.static('dist'))
+app.use(express.json())
 
 console.log(__dirname)
 
@@ -26,8 +27,9 @@ app.get('/test', function (req, res) {
 
 //------------------------------------------------------------------------------------------------------------------------
 
-app.post("/api", (req, res)=>{
-  console.log(req);
+app.post("/api", (request, response)=>{
+  console.log("I got a request!");
+  console.log(request.body);
 }
 );
 

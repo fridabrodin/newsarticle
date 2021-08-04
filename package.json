@@ -33,6 +33,6 @@
     "sass-loader": "^8.0.0",
     "style-loader": "^1.1.2",
     "webpack-dev-server": "^3.11.2",
-    "workbox-webpack-plugin": "^6.1.5"
+    "workbox-webpack-plugin": "^5.0.0"
   }
 }
