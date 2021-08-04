@@ -26,20 +26,22 @@ app.get('/test', function (req, res) {
 
 //------------------------------------------------------------------------------------------------------------------------
 
+app.post("/api", (req, res)=>{
+  console.log(req);
+}
+);
+
 // What we need to create an URL from the API
 let baseURL = "https://api.meaningcloud.com/sentiment-2.1?key=";
 const apiKey = process.env.API_KEY;
 let url = "&url=";
 let lang = "&lang=en";
 
-/* Function to GET Meaningcloud API data*/
+/* GET request to get Meaningcloud API data*/
 
-const getNews = async (baseURL,apiKey,news,url,lang)=>{
-    const res = await fetch(baseURL+apiKey+news+url+lang)
-    try {
-      const data = await res.json();
-      return data;
-    }  catch(error) {
-      console.log("error", error);
-    }
-  }
+
+
+  /* POST ROUTE */
+
+
+

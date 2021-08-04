@@ -11,7 +11,5 @@ export {
     handleSubmit
    }
 
-console.log(checkForName);
-
 /*alert("Let's try this one out!");
 console.log("Let's try this one out!");*/
