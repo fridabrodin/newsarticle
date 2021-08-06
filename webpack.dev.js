@@ -8,6 +8,11 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     entry: './src/client/index.js',
+    devServer: {
+        proxy: {
+          '/api': 'http://localhost:8081',
+        },
+      },
     mode: 'development',
     devtool: 'source-map',
     stats: 'verbose',

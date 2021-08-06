@@ -27,9 +27,11 @@ app.get('/test', function (req, res) {
 
 //------------------------------------------------------------------------------------------------------------------------
 
-app.post("/api", (request, response)=>{
+app.post("/api", (req, res)=>{
   console.log("I got a request!");
-  console.log(request.body);
+  console.log(req.body);
+  res.set("Test","Testing Now again!");
+  res.send("Hello");
 }
 );
 
