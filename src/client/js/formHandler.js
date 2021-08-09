@@ -1,23 +1,28 @@
-function handleSubmit(event) {
+async function handleSubmit(event) {
   event.preventDefault();
   // check what URL was put into the form field
   let news = document.getElementById("name").value;
   Client.checkForName(news);
   console.log("::: Form Submitted :::")
 
- const data = {news};
+ const article = {news};
  const options = {
   method: 'POST',
   credentials: 'same-origin',
   headers: {
         'Content-Type': 'application/json',
   },
-    body: JSON.stringify(data),
+    body: JSON.stringify(article),
  }
- fetch("/api", options);
+ const res = await fetch("/api", options);
+ const json = await res.json();
+ console.log(data);
+ console.log("What now?");
 }
 
+
 export { handleSubmit }
+
 
 
 // HTML elements
@@ -28,4 +33,3 @@ const confidence = document.getElementById("confidence");
 const irony = document.getElementById("irony");
 
 // Update UI
-
