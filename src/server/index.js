@@ -53,13 +53,6 @@ app.post("/api", (req, res) => {
   fetch(baseURL + apiKey + url + req.body.news + lang)
   .then(res => res.json())
   .then(data => res.send(data));
-
-  // res.json({
-  //   complete: baseURL+apiKey+url+req.body.news+lang,
-  //   text: "Random text",
-  //   agreement: data.agreement,
-  // }
-  // );
 }
 );
 

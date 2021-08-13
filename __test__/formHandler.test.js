@@ -1,4 +1,7 @@
-//Import the file to test
+/**
+ * @jest-environment jsdom
+ */
+
 import { handleSubmit } from "../src/client/js/formHandler"
 
 describe("Testing the submit functionality", () => {
